@@ -46,7 +46,21 @@ public class Matriz {
             } 
         } 
         return matrizResultante; 
-    } 
+    }
+    
+    public static Matriz traspuestaMatriz(Matriz a) {
+    	int i, j, filasA, columnasA; 
+    	filasA = a.getDimension().width; 
+        columnasA = a.getDimension().height;
+        
+        Matriz matrizResultante = new Matriz(filasA, columnasA, false);
+        for (j = 0; j < filasA; j++) { 
+            for (i = 0; i < columnasA; i++) { 
+                matrizResultante.datos[i][j]= a.datos[j][i];
+            } 
+        } 
+        return matrizResultante; 
+    }
 
     @Override
     public String toString(){
@@ -65,4 +79,5 @@ public class Matriz {
         ret += "]\n";
         return ret;
     }
+    
 }
