@@ -20,6 +20,7 @@ public class Matrices {
         }
         
         probarMult();
+        probarTras();
     }
     
     public static void probarMult() {
@@ -32,6 +33,13 @@ public class Matrices {
         } catch (DimensionesIncompatibles ex) {
             ex.printStackTrace();
         }
+       
     }
     
+    public static void probarTras() {
+    	Matriz m1 = new Matriz(3, 4, true);
+        System.out.println(m1);
+        
+        System.out.println(Matriz.traspuestaMatriz(m1));
+    }
 }

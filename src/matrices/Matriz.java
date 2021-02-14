@@ -48,6 +48,19 @@ public class Matriz {
         return matrizResultante; 
     }
     
+    public static Matriz traspuestaMatriz(Matriz a) {
+    	int i, j, filasA, columnasA; 
+    	filasA = a.getDimension().width; 
+        columnasA = a.getDimension().height;
+        
+        Matriz matrizResultante = new Matriz(filasA, columnasA, false);
+        for (j = 0; j < filasA; j++) { 
+            for (i = 0; i < columnasA; i++) { 
+                matrizResultante.datos[i][j]= a.datos[j][i];
+            } 
+        } 
+        return matrizResultante; 
+    }
 
 public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
         if(!(a.getDimension().height==b.getDimension().width) ||
@@ -86,4 +99,5 @@ public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws Dimension
         ret += "]\n";
         return ret;
     }
+    
 }
