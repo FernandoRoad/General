@@ -46,9 +46,10 @@ public class Matriz {
             } 
         } 
         return matrizResultante; 
-    } 
+    }
+    
 
-    public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
+public static Matriz multiplicarDosMatrices(Matriz a, Matriz b) throws DimensionesIncompatibles { 
         if(!(a.getDimension().height==b.getDimension().width) ||
         		!(a.getDimension().width==b.getDimension().height)) throw new DimensionesIncompatibles("Dimensiones multiplicación: [a,b]x[b,a]= [a,a]");        
         int i, j, k, filasA, columnasA; 
@@ -66,7 +67,7 @@ public class Matriz {
             } 
         } 
         return matrizResultante; 
-    } 
+    }
     
     @Override
     public String toString(){
